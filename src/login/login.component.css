@@ -1,0 +1,16 @@
+#login{
+    text-align: center;
+   
+}
+input{
+    width: 200px;
+    height: 50px;
+    border-radius: 15% ;
+    border: 3px black;
+}
+button{
+    background-color: aqua;
+    border: none;
+    width: 200px;
+    height: 40px;
+}
