@@ -1,1 +1,19 @@
-<p>list-lessond works!</p>
+<div class="gallery">
+  <div class="lesson-card" 
+       *ngFor="let lesson of lessons"
+       [ngClass]="{ 'highlight': hasStarted(lesson) }"
+       (click)="selectLesson(lesson)">
+       
+    <h3>{{ lesson.name }}</h3>
+    <p><strong>מורה:</strong> {{ lesson.teacher }}</p>
+    <p><strong>מספר מפגשים:</strong> {{ lesson.numofmeets }}</p>
+    <p><strong>תאריך התחלה:</strong> {{ lesson.begindate }}</p>
+    <p><strong>מחיר:</strong> {{ lesson.price }}</p>
+    <p><strong>יום:</strong> {{ lesson.day }}</p>
+    <p><strong>שעה:</strong> {{ lesson.hour }}</p>
+
+  </div>
+</div>
+
+
+  <app-lesson-details *ngIf="selectedLesson"  [lesson]="selectedLesson"></app-lesson-details>

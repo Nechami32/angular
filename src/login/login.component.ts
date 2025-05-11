@@ -24,7 +24,8 @@ console.log('Password:', this.password);
     if (user) {
       this.subject = user.subject;
 
-      if (this.subject === 'teacher') {
+      if (this.subject === 'secretary') {
+        
         this.router.navigate(['secretary']);
       } else if (this.subject === 'teacher') {
         this.router.navigate(['teacher']);
